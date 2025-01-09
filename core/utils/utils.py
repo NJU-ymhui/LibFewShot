@@ -169,6 +169,7 @@ def create_dirs(dir_paths):
         dir_paths = [dir_paths]
     for dir_path in dir_paths:
         if not os.path.exists(dir_path):
+            print("Dir tobe created:", dir_path)
             os.mkdir(dir_path)
 
 

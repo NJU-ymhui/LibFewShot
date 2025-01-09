@@ -318,13 +318,18 @@ class Trainer(object):
             viz_path = os.path.join(log_path, "tfboard_files")
         else:
             # you should ensure that data_root name contains its true name
-            base_dir = "{}-{}-{}-{}-{}".format(
-                config["classifier"]["name"],
+            base_dir = "{}-{}-{}-{}".format(
+                # config["classifier"]["name"],
                 config["data_root"].split("/")[-1],
                 config["backbone"]["name"],
                 config["way_num"],
                 config["shot_num"],
             )
+            print("classifier", config["classifier"]["name"])
+            print("data_root", config["data_root"])
+            print("backbone", config["backbone"]["name"])
+            print("way_num", config["way_num"])
+            print("shot_num", config["shot_num"])
             result_dir = (
                 base_dir
                 + "{}-{}".format(
@@ -335,6 +340,8 @@ class Trainer(object):
                 else config["log_name"]
             )
             result_path = os.path.join(config["result_root"], result_dir)
+            print("here the base_dir:", base_dir)
+            print("here the result_dir:", result_dir)
             # print("Result DIR: " + result_path)
             checkpoints_path = os.path.join(result_path, "checkpoints")
             log_path = os.path.join(result_path, "log_files")
