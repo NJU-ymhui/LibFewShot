@@ -1,3 +1,14 @@
+# 最重要
+## 0
+Fork from https://github.com/RL-VIG/LibFewShot
+## 1
+**请修改config/headers/data.yaml中的`data_root`为自己本地的数据集路径**
+
+## 2
+**正式复现算法训练模型时，将`run_trainer.py`中的`config = ...`改为**
+
+**`config = Config("./config/proto.yaml").get_config_dict()`**
+
 # [LibFewShot](https://arxiv.org/abs/2109.04898)
 Make few-shot learning easy.
 
