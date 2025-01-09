@@ -137,4 +137,4 @@ dmypy.json
 results/
 
 # Windows config for yourself computer
-config/**
+#config/**
