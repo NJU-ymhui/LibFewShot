@@ -1,4 +1,4 @@
-data_root: E:\机器学习\数据集\数据集\miniImageNet--ravi\miniImageNet--ravi  # 改成你自己的数据集路径
+data_root: E:\机器学习\final\miniImageNet--ravi # 改成你自己的数据集路径
 image_size: 84
 use_memory: False
 augment: True

@@ -1,6 +1,7 @@
 classifier:
   name: FORT
   kwargs:
-    # TODO
+    init_type: "normal"
+    num_classes: 200
 
 # TODO

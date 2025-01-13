@@ -15,7 +15,8 @@ def main(rank, config):
 
 
 if __name__ == "__main__":
-    config = Config("./config/test_install.yaml").get_config_dict()  # recover to proto.yaml when implementing algorithm
+    os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
+    config = Config("./config/fort.yaml").get_config_dict()  # recover to proto.yaml when implementing algorithm
 
     if config["n_gpu"] > 1:
         os.environ["CUDA_VISIBLE_DEVICES"] = config["device_ids"]

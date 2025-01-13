@@ -5,6 +5,30 @@ includes:
   - headers/model.yaml
   - headers/optimizer.yaml
   - classifiers/FORT.yaml
-  - # TODO
+  - backbones/Conv64F.yaml  # TODO maybe need to change to another backbone
+
+#classifier:
+#  name: FORT
+#  kwargs:
+#    init_type: "normal"
+#    num_classes: 200
+
+device_ids: 0
+n_gpu: 1  # 电脑只有单个可用于机器学习的GPU ToT，如果你有多个可以改成 2，并把上面的device_ids改成 0, 1
+way_num: 5
+shot_num: 1
+query_num: 15
+episode_size: 2
+train_episode: 100
+test_episode: 100
+
+backbone:
+  name: Conv64F
+  kwargs:
+    is_flatten: True
+    is_feature: False
+    leaky_relu: False
+    negative_slope: 0.2
+    last_pool: True
 
 # TODO
