@@ -34,7 +34,10 @@ class FORT(MetricModel):
             return self.set_forward(x)
 
     def set_forward(self, batch):
-        images, _ = batch
+        if isinstance(batch, tuple) or isinstance(batch, list):
+            images = batch[0]
+        else:
+            images = batch
         images = images.cuda()
         features = self.vit(images)
         logits = self.head(features)
