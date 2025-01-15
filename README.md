@@ -7,7 +7,13 @@ Fork from https://github.com/RL-VIG/LibFewShot
 ## 2
 **正式复现算法训练模型时，将`run_trainer.py`中的`config = ...`改为**
 
-**`config = Config("./config/proto.yaml").get_config_dict()`**
+**`config = Config("./config/fort.yaml").get_config_dict()`**
+
+## 3
+框架无法使用时，可以使用我们自定义的训练和测试框架代码，首先运行`clean.py`生成样本类别文件夹（为原始样本分类），然后运行`main.py`进行训练和测试，
+模型将自动保存到本地。
+
+注意替换对应的原始数据路径为自己本地的数据路径
 
 # [LibFewShot](https://arxiv.org/abs/2109.04898)
 Make few-shot learning easy.
