@@ -67,5 +67,9 @@ model.alpha = 0.5  # 设置注意力增强损失的权重
 # 训练模型
 train(model, train_loader, epochs=10, alpha=0.5)
 
+# 保存整个模型
+torch.save(model, "fort_model_full.pth")
+print("Entire model saved successfully!")
+
 # 验证模型
 validate(model, test_loader)
